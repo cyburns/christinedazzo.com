@@ -1,13 +1,11 @@
-import Header from "@/components/navbar";
 import "./globals.css";
-import { IBM_Plex_Sans } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
-import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 
-const ibmPlexSans = IBM_Plex_Sans({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+const bebasNeue = Bebas_Neue({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -23,11 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${ibmPlexSans.className} `}>
+      <body className={`${bebasNeue.className} `}>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             {children}
-
             <Toaster position="top-right" />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
