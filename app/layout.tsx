@@ -3,6 +3,7 @@ import { Bebas_Neue } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import Mouse from "@/components/Mouse";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -10,8 +11,8 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  title: "Cyrus | Portfolio",
-  description: "Cyrus is a full-stack developer.",
+  title: "Christine | Portfolio",
+  description: "Director of Marketing.",
 };
 
 export default function RootLayout({
@@ -20,7 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className="!scroll-smooth bg-[#254d27]">
+      <Mouse />
       <body className={`${bebasNeue.className} `}>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

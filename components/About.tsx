@@ -20,7 +20,7 @@ const About = () => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
-    animationData: GuyAnimation,
+    animationData: AnimalGuys,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -61,7 +61,7 @@ const About = () => {
         </h3>
       </div>
 
-      <div className="mt-10 flex flex-col md:flex-row m-32 max-w-7xl justify-center items-center mx-auto">
+      <div className="mt-10 flex flex-col md:flex-row mx-auto max-w-7xl justify-center items-center ">
         <div className="flex items-center justify-center">
           <p className="text-center p-4 text-pink-400">
             <span className={`${spanClass} text-center`}>
@@ -84,10 +84,10 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="z-50 flex items-center justify-center">
+      <div className="z-50 flex items-center justify-center mt-10">
         <Image src={ChrisSig} alt="Christine Dazzo" width={500} height={500} />
       </div>
-      <h3 className="text-center max-w-3xl mx-auto !leading-7 text-3xl text-pink-400">
+      <h3 className="text-center max-w-3xl mx-auto !leading-7 text-3xl text-pink-400 p-4">
         I'M CHRISTINE, A FREELANCE ART DIRECTOR, VISUAL DESIGNER, CREATIVE
         DEVELOPER AND HOUSEPLANT ENTHUSIAST BASED IN NYC. I WORK WITH BRANDS OF
         ALL SIZES, ACROSS ALL INDUSTRIES, IN EVERY CORNER OF THE WORLD.,
