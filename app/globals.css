@@ -396,3 +396,17 @@ header.active-message {
 .text-switch:hover span {
   transform: translate3d(-200%, 0, 0);
 }
+
+/* VIDEO ZOOM EFFECT */
+
+.video-container {
+  overflow: hidden;
+}
+
+.video {
+  transition: transform 0.5s ease;
+}
+
+.video-container:hover .video {
+  transform: scale(1.1); /* Adjust the scale value as needed */
+}
