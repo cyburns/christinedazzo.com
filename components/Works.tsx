@@ -2,22 +2,28 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import CanyonRanch from "@/public/images/CR_3_CD.jpeg";
+import Exhale from "@/public/images/EXHALE_CD.jpeg";
+import Image from "next/image";
 
 const words = [
   {
-    name: "Instagram",
+    name: "canyon ranch",
     body: "Instagram is a social media platform that allows users to share photos and videos with their followers. Users can also view, like, and comment on posts from other users. Instagram is a great way to connect with friends and family, as well as discover new content from creators around the world.",
     class: "bg-[#622d21] text-[5rem] text-center text-[#a45543] sticky top-32",
+    image: CanyonRanch,
   },
   {
-    name: "LinkedIn",
+    name: "Exhlae spa",
     body: "LinkedIn is a professional networking platform that allows users to connect with other professionals in their industry. Users can create a profile that showcases their skills and experience, as well as connect with other users to build their network. LinkedIn is a great way to find job opportunities, share industry news, and connect with other professionals in your field.",
     class: "bg-[#9e9882] text-[5rem] text-center text-[#c4c5b0] sticky top-56",
+    image: Exhale,
   },
   {
     name: "Facebook",
     body: "Facebook is a social media platform that allows users to connect with friends and family, share photos and updates, and discover new content from pages and groups. Users can also join events, play games, and shop on Facebook. Facebook is a great way to stay connected with the people you care about and discover new content from creators around the world.",
     class: "bg-[#6b9065] text-[5rem] text-center text-[#9dcf88] sticky  top-72",
+    image: Exhale,
   },
 ];
 
@@ -31,7 +37,7 @@ const Works = () => {
   const progress = scrollYProgress;
 
   return (
-    <div className="relative mb-[100vh] ">
+    <div className="relative mb-[100vh]">
       <div className="sticky top-[-14rem] justify-center items-center">
         <h1 className="text-pink-400 text-center text-[40vw] underline">
           WORK
@@ -40,14 +46,13 @@ const Works = () => {
       <div className="flex flex-col items-center justify-center z-30 relative ">
         <ul className="space-y-8" ref={ref}>
           {words.map((word: any, index: number) => {
-            const targetScale = 1 - (words.length - index) * 0.05;
+            const targetScale = 1 - (words.length - index) * 0.15;
             const container = useRef(null);
             const scale = useTransform(
               progress,
               [index * 0.25, 1],
               [1, targetScale]
             );
-
             return (
               <motion.div
                 ref={container}
@@ -58,8 +63,17 @@ const Works = () => {
                 }}
               >
                 <li>
-                  <h1 className="font-bold mb-4 md:text-[5rem] lg:text-[8rem]">{word.name}</h1>
-                  <p className="text-xl">{word.body}</p>
+                  <h1 className="font-bold md:text-[5rem] lg:text-[8rem] -mt-10 -mb-10">
+                    {word.name}
+                  </h1>
+                  {/* <p className="text-xl">{word.body}</p> */}
+                  <motion.div className="mx-auto mt-4 overflow-hidden">
+                    <Image
+                      src={word.image}
+                      alt={word.name}
+                      className="object-cover h-[60%] mx-auto"
+                    />
+                  </motion.div>
                 </li>
               </motion.div>
             );
