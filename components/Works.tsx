@@ -5,6 +5,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import CanyonRanch from "@/public/images/CR_3_CD.jpeg";
 import Exhale from "@/public/images/EXHALE_CD.jpeg";
 import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
+
+const play = Playfair_Display({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
+
+const spanClass = `${play.className} text-base xl:text-center`;
 
 const words = [
   {
@@ -37,14 +45,17 @@ const Works = () => {
   const progress = scrollYProgress;
 
   return (
-    <div className="relative mb-[100vh]">
+    <div className="relative mb-10">
       <div className="sticky top-[-14rem] justify-center items-center">
         <h1 className="text-pink-400 text-center text-[40vw] underline">
           WORK
         </h1>
       </div>
-      <div className="flex flex-col items-center justify-center z-30 relative ">
-        <ul className="space-y-8" ref={ref}>
+      <div className="flex flex-col items-center justify-center z-30 relative">
+        <ul
+          className="space-y-8 flex flex-col items-center justify-center"
+          ref={ref}
+        >
           {words.map((word: any, index: number) => {
             const targetScale = 1 - (words.length - index) * 0.15;
             const container = useRef(null);
@@ -78,6 +89,33 @@ const Works = () => {
               </motion.div>
             );
           })}
+
+          <div className="bg-pink-400 mb-96 flex justify-center items-center flex-col p-4  z-50 rounded-[5rem] sticky top-96 py-56">
+            <h3 className={`${spanClass} text-end text-green-900 text-[3rem] mb-24`}>More about me</h3>
+            <h1 className="text-green-900 text-center text-[6vw] !leading-[0.8] ">
+              AS ARTIFICIAL INTELLIGENCE BECOMES A BUZZWORD FOR REPLACING HUMAN
+              ABILITY, IT’S MORE IMPORTANT THAN EVER TO TELL YOUR STORY IN AN
+              AUTHENTIC WAY
+            </h1>
+            <h3
+              className={`text-green-900 text-xl lg:text-3xl font-thin text-center max-w-3xl mt-10`}
+            >
+              WORKING
+              <span className={`${spanClass} text-end`}> WITH </span>
+              PASSIONATE PEOPLE
+              <span className={`${spanClass} text-end`}> & </span>
+              DISRUPTORS
+              <span className={`${spanClass} text-end`}>
+                {" "}
+                TO CREATE MEMORABLE{" "}
+              </span>
+              BRANDS
+              <span className={`${spanClass} text-end`}> & CAPTIVATING </span>
+              DIGITAL EXPERIENCES
+              <span className={`${spanClass} text-end`}> THAT DELIVER </span>
+              RESULTS
+            </h3>
+          </div>
         </ul>
       </div>
     </div>

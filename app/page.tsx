@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import About from "@/components/About";
 import Works from "@/components/Works";
 import Hero from "@/components/hero/Hero";
+import Contact from "@/components/Contact";
+import Info from "@/components/Info";
 
 export default function Home() {
   useEffect(() => {
@@ -18,6 +20,8 @@ export default function Home() {
       <Hero />
       <About />
       <Works />
+      <Info />
+      <Contact />
     </main>
   );
 }

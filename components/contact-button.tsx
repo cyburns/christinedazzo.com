@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Message } from "@mui/icons-material";
-import Contact from "./contact";
+import Contact from "./contact2";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ContactButton() {
