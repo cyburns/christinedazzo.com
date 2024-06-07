@@ -29,7 +29,7 @@ const Mouse = () => {
         damping: 25,
         stiffness: 400,
       }}
-      className="fixed top-0 left-0 z-50"
+      className="fixed top-0 left-0 z-50 pointer-events-none"
     >
       <div className="relative">
         <div className="bg-pink-400 rounded-full w-2 h-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>

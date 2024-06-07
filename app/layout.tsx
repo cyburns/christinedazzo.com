@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth bg-[#254d27]">
+    <html lang="en" className="!scroll-smooth bg-green-900">
       <Mouse />
       <body className={`${bebasNeue.className} `}>
         <ThemeContextProvider>
