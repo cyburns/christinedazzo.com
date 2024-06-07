@@ -30,10 +30,6 @@ const About = () => {
   const isSmallTextInView = useInView(smallTextRef);
   const smallControls = useAnimation();
 
-  const workTextRef = useRef(null);
-  const isWorkTextInView = useInView(workTextRef);
-  const workControls = useAnimation();
-
   useEffect(() => {
     if (isLargeTextInView) {
       controls.start("visible");
@@ -46,10 +42,6 @@ const About = () => {
     if (isSmallTextInView) {
       smallControls.start("visible");
     }
-
-    if (isWorkTextInView) {
-      workControls.start("visible");
-    }
   }, [
     isLargeTextInView,
     controls,
@@ -60,8 +52,6 @@ const About = () => {
     isSmallTextInView,
     smallControls,
     smallTextRef,
-    isWorkTextInView,
-    workControls,
   ]);
 
   const lottieOptions = {
@@ -91,7 +81,7 @@ const About = () => {
   };
 
   return (
-    <div className="items-center justify-center bg-green-800!leading-[0.5] md:!leading-[0.7] pt-10 pb-56">
+    <div className="items-center justify-center bg-green-800!leading-[0.5] md:!leading-[0.7] pt-10 pb-16">
       <motion.div
         ref={largeTextRef}
         variants={textVariants}
@@ -180,19 +170,6 @@ const About = () => {
           ARE MORE EFFECTIVE AT CAPTIVATING AUDIENCES, EVOKING EMOTION AND
           IMPROVING CONVERSION.
         </h3>
-      </motion.div>
-
-      <motion.div
-        variants={textVariants}
-        initial="hidden"
-        animate={workControls}
-        viewport={{ once: true }}
-        ref={workTextRef}
-        className="bg-pink-400 rounded-[10rem] mx-16"
-      >
-        <h1 className="text-green-900 text-center mt-32 text-[40vw] underline py-32">
-          WORK
-        </h1>
       </motion.div>
     </div>
   );

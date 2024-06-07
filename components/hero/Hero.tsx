@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 import HeroDark from "@/public/images/hero-dark.png";
 import ChrisSig from "@/public/images/Christine-Dazzo-6-6-2024.png";
@@ -6,6 +8,7 @@ import Barcode from "./Barcode";
 import InstagramWorks from "@/components/hero/InstagramInfo";
 import LinkedInWork from "@/components/hero/LinkedInWork";
 import { Oswald, Playfair_Display } from "next/font/google";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const oswald = Oswald({
   weight: ["200", "400", "700"],
@@ -20,6 +23,14 @@ const play = Playfair_Display({
 const spanClass = `${play.className} text-base xl:text-center text-end`;
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
   return (
     <div className="w-screen h-screen overflow-hidden relative">
       <div className="flex flex-row justify-between px-5">
@@ -35,14 +46,22 @@ const Hero = () => {
           height={1000}
         />
       </div>
-      <Image
-        src={HeroDark}
-        alt="Hero"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="-z-50"
-      />
+      <motion.div
+        style={{
+          y: backgroundY,
+        }}
+        ref={ref}
+        className="absolute top-0 left-0 w-screen h-screen -z-10"
+      >
+        <Image
+          src={HeroDark}
+          alt="Hero"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="-z-50"
+        />
+      </motion.div>
 
       <div className="absolute bottom-5 w-screen px-5 flex flex-row justify-center sm:justify-between items-end">
         <Barcode />
