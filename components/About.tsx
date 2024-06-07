@@ -81,7 +81,7 @@ const About = () => {
   };
 
   return (
-    <div className="items-center justify-center bg-green-800!leading-[0.5] md:!leading-[0.7] pt-10 pb-16">
+    <div className="items-center justify-center bg-green-800!leading-[0.5] md:!leading-[0.7] pt-10 overflow-hidden">
       <motion.div
         ref={largeTextRef}
         variants={textVariants}
@@ -140,7 +140,9 @@ const About = () => {
               </h2>
             </p>
           </div>
-          <Lottie options={lottieOptions} height={500} width={500} />
+          <div className="hidden md:flex">
+            <Lottie options={lottieOptions} height={500} width={500} />
+          </div>
           <div className="flex items-center justify-center">
             <p className="text-center p-4 text-pink-400">
               <span className={`${spanClass} text-center`}>

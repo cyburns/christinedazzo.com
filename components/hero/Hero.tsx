@@ -29,10 +29,10 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 300]);
 
   return (
-    <div className="w-screen h-screen overflow-hidden relative">
+    <div className="w-screen h-screen overflow-hidden relative ">
       <div className="flex flex-row justify-between px-5">
         <InstagramWorks />
 
