@@ -57,7 +57,7 @@ const About = () => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
-    animationData: AnimalGuys,
+    animationData: GuyAnimation,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -82,13 +82,7 @@ const About = () => {
 
   return (
     <div className="items-center justify-center bg-green-800!leading-[0.5] md:!leading-[0.7] pt-10 overflow-hidden">
-      <motion.div
-        ref={largeTextRef}
-        variants={textVariants}
-        initial="hidden"
-        animate={controls}
-        viewport={{ once: true }}
-      >
+      <div>
         <h1 className="text-center p-4 text-pink-400 text-[17vw] md:text-[18vw]">
           New York-BASED
         </h1>
@@ -98,7 +92,7 @@ const About = () => {
         <h1 className="text-center p-4 text-pink-400 text-[14vw] md:text-[14.8vw]">
           CREATIVE DEVELOPER
         </h1>
-      </motion.div>
+      </div>
       <motion.div
         ref={mediumTextRef}
         variants={textVariants}
