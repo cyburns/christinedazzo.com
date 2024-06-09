@@ -92,17 +92,17 @@ const Works = () => {
 
           <div className="bg-pink-400 mb-96 flex justify-center items-center flex-col p-4  z-50 rounded-[5rem] sticky top-96 py-56">
             <h3
-              className={`${spanClass} text-end text-green-900 text-[3rem] mb-24`}
+              className={`${spanClass} text-end text-green-800 text-[3rem] mb-24`}
             >
               More about me
             </h3>
-            <h1 className="text-green-900 text-center text-[6vw] !leading-[0.8] ">
+            <h1 className="text-green-800 text-center text-[6vw] !leading-[0.8] ">
               AS ARTIFICIAL INTELLIGENCE BECOMES A BUZZWORD FOR REPLACING HUMAN
               ABILITY, IT’S MORE IMPORTANT THAN EVER TO TELL YOUR STORY IN AN
               AUTHENTIC WAY
             </h1>
             <h3
-              className={`text-green-900 text-xl lg:text-3xl font-thin text-center max-w-3xl mt-10`}
+              className={`text-green-800 text-xl lg:text-3xl font-thin text-center max-w-3xl mt-10`}
             >
               WORKING
               <span className={`${spanClass} text-end`}> WITH </span>

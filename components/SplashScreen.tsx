@@ -77,7 +77,7 @@ const SplashScreen = () => {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="bg-green-900 h-screen w-screen fixed flex items-center justify-center z-[999] overflow-hidden"
+      className="bg-green-800 h-screen w-screen fixed flex items-center justify-center z-[999] overflow-hidden"
     >
       {dimension.width > 0 && (
         <>
@@ -87,15 +87,15 @@ const SplashScreen = () => {
             animate="enter"
             className="flex items-center text-pink-400 text-[5rem] absolute z-[1]"
           >
-            <span className="block w-[10px] h-[10px] bg-green-900 rounded-full mr-[10px]"></span>
-            • {words[index]}
+            <span className="block w-[10px] h-[10px] bg-green-800 rounded-full mr-[10px]"></span>
+            {words[index]}
           </motion.p>
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
             <motion.path
               variants={curve}
               initial="initial"
               exit="exit"
-              className="fill-current text-green-900"
+              className="fill-current text-green-800"
             ></motion.path>
           </svg>
         </>

@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" bg-green-900 example">
+    <html lang="en" className=" bg-green-800 example">
       <Mouse />
       <body className={`${bebasNeue.className} `}>
         <ThemeContextProvider>
