@@ -129,9 +129,9 @@ const About = () => {
               <span className={`${spanClass} text-center`}>
                 CREATING STRONG BRANDS
               </span>
-              <h2 className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
+              <span className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
                 BRAND IDENTITY BRAND STRATEGY TYPOGRAPHY
-              </h2>
+              </span>
             </p>
           </div>
           <div className="hidden md:flex">
@@ -142,9 +142,9 @@ const About = () => {
               <span className={`${spanClass} text-center`}>
                 DEVELOPING DIGITAL PRODUCTS
               </span>
-              <h2 className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
+              <span className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
                 ART DIRECTION DIGITAL DESIGN DEVELOPMENT
-              </h2>
+              </span>
             </p>
           </div>
         </div>
