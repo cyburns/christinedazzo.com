@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Bebas_Neue } from "next/font/google";
-import ActiveSectionContextProvider from "@/context/active-section-context";
-import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import Mouse from "@/components/Mouse";
 
@@ -24,12 +22,8 @@ export default function RootLayout({
     <html lang="en" className=" bg-green-800 example">
       <Mouse />
       <body className={`${bebasNeue.className} `}>
-        <ThemeContextProvider>
-          <ActiveSectionContextProvider>
-            {children}
-            <Toaster position="top-right" />
-          </ActiveSectionContextProvider>
-        </ThemeContextProvider>
+        {children}
+        <Toaster position="top-right" />
       </body>
     </html>
   );

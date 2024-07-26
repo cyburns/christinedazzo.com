@@ -2,7 +2,9 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { words } from "@/lib/data";
+import CanyonRanch from "@/public/images/CR_3_CD.jpeg";
+import Exhale from "@/public/images/EXHALE_CD.jpeg";
+
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
 
@@ -10,6 +12,27 @@ const play = Playfair_Display({
   weight: ["400", "700"],
   subsets: ["latin"],
 });
+
+export const words = [
+  {
+    name: "canyon ranch",
+    body: "Instagram is a social media platform that allows users to share photos and videos with their followers. Users can also view, like, and comment on posts from other users. Instagram is a great way to connect with friends and family, as well as discover new content from creators around the world.",
+    class: "bg-[#622d21] text-[5rem] text-center text-[#a45543] sticky top-32",
+    image: CanyonRanch,
+  },
+  {
+    name: "Exhale spa",
+    body: "LinkedIn is a professional networking platform that allows users to connect with other professionals in their industry. Users can create a profile that showcases their skills and experience, as well as connect with other users to build their network. LinkedIn is a great way to find job opportunities, share industry news, and connect with other professionals in your field.",
+    class: "bg-[#9e9882] text-[5rem] text-center text-[#c4c5b0] sticky top-56",
+    image: Exhale,
+  },
+  {
+    name: "Facebook",
+    body: "Facebook is a social media platform that allows users to connect with friends and family, share photos and updates, and discover new content from pages and groups. Users can also join events, play games, and shop on Facebook. Facebook is a great way to stay connected with the people you care about and discover new content from creators around the world.",
+    class: "bg-[#6b9065] text-[5rem] text-center text-[#9dcf88] sticky  top-72",
+    image: Exhale,
+  },
+];
 
 const spanClass = `${play.className} xl:text-center text-xl lg:text-3xl`;
 

@@ -57,7 +57,7 @@ const About = () => {
   const lottieOptions = {
     loop: true,
     autoplay: true,
-    animationData: GuyAnimation,
+    animationData: AnimalGuys,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -124,13 +124,10 @@ const About = () => {
         </h3>
 
         <div className="mt-10 flex flex-col md:flex-row mx-auto max-w-7xl justify-center items-center ">
-          <div className="flex items-center justify-center">
-            <p className="text-center p-4 text-pink-400">
-              <span className={`${spanClass} text-center`}>
-                CREATING STRONG BRANDS
-              </span>
+          <div className="flex items-center justify-center ">
+            <p className="text-center p-4 text-pink-400 ">
               <span className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
-                BRAND IDENTITY BRAND STRATEGY TYPOGRAPHY
+                CREATING STRONG BRANDS BRAND IDENTITY BRAND STRATEGY TYPOGRAPHY
               </span>
             </p>
           </div>
@@ -139,11 +136,9 @@ const About = () => {
           </div>
           <div className="flex items-center justify-center">
             <p className="text-center p-4 text-pink-400">
-              <span className={`${spanClass} text-center`}>
-                DEVELOPING DIGITAL PRODUCTS
-              </span>
               <span className="text-center p-4 text-pink-400 text-3xl md:text-5xl max-w-xs">
-                ART DIRECTION DIGITAL DESIGN DEVELOPMENT
+                DEVELOPING DIGITAL PRODUCTS ART DIRECTION DIGITAL DESIGN
+                DEVELOPMENT
               </span>
             </p>
           </div>
