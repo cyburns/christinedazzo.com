@@ -2,7 +2,8 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import HeroDark from "@/public/images/hero-dark.png";
+import ChrisHeroLg from "@/public/images/hero-dark.png";
+import ChrisHeroSm from "@/public/images/chris-hero-sm.png";
 import ChrisSig from "@/public/images/Christine-Dazzo-6-6-2024.png";
 import Barcode from "./Barcode";
 import InstagramWorks from "@/components/hero/InstagramInfo";
@@ -54,12 +55,21 @@ const Hero = () => {
         className="absolute top-0 left-0 w-screen h-screen -z-10"
       >
         <Image
-          src={HeroDark}
+          src={ChrisHeroLg}
           alt="Hero"
           layout="fill"
           objectFit="cover"
           quality={100}
-          className="-z-50"
+          className="-z-50 hidden sm:flex"
+        />
+
+        <Image
+          src={ChrisHeroSm}
+          alt="Hero"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          className="-z-50 flex sm:hidden"
         />
       </motion.div>
 

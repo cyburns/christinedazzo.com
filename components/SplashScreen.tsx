@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 const words = [
   "Hello",
-  "Bonjour",
-  "Ciao",
-  "Olà",
-  "やあ",
-  "Hallå",
-  "Guten tag",
-  "Hallo",
+  "Happy",
+  "Birthday",
+  "Christine",
+  "Dazzo",
+  "❤️",
+  "❤️",
+  "❤️",
 ];
 
 export const opacity = {
