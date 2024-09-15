@@ -2,8 +2,9 @@
 
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import CanyonRanch from "@/public/images/CR_3_CD.jpeg";
 import Exhale from "@/public/images/EXHALE_CD.jpeg";
+import Freelance from "@/public/images/chris-free.png";
+import CanyonRanch from "@/public/images/CR_3_CD.jpeg";
 
 import Image from "next/image";
 import { Playfair_Display } from "next/font/google";
@@ -13,28 +14,49 @@ const play = Playfair_Display({
   subsets: ["latin"],
 });
 
-export const words = [
+export const word2 = [
   {
     name: "canyon ranch",
-    body: "Instagram is a social media platform that allows users to share photos and videos with their followers. Users can also view, like, and comment on posts from other users. Instagram is a great way to connect with friends and family, as well as discover new content from creators around the world.",
-    class: "bg-[#622d21] text-[5rem] text-center text-[#a45543] sticky top-32",
+    body: "Guest Experience Manager",
     image: CanyonRanch,
+    class: "bg-[#622d21] text-[5rem] text-center text-[#a45543] sticky top-32",
   },
   {
     name: "Exhale spa",
-    body: "LinkedIn is a professional networking platform that allows users to connect with other professionals in their industry. Users can create a profile that showcases their skills and experience, as well as connect with other users to build their network. LinkedIn is a great way to find job opportunities, share industry news, and connect with other professionals in your field.",
-    class: "bg-[#9e9882] text-[5rem] text-center text-[#c4c5b0] sticky top-56",
+    body: "General Manager",
     image: Exhale,
+    class: "bg-[#9e9882] text-[5rem] text-center text-[#c4c5b0] sticky top-56",
   },
   {
-    name: "Facebook",
-    body: "Facebook is a social media platform that allows users to connect with friends and family, share photos and updates, and discover new content from pages and groups. Users can also join events, play games, and shop on Facebook. Facebook is a great way to stay connected with the people you care about and discover new content from creators around the world.",
-    class: "bg-[#6b9065] text-[5rem] text-center text-[#9dcf88] sticky  top-72",
+    name: "Freelance Creator",
+    body: "Digital Marketing",
     image: Exhale,
+    class: "bg-[#6b9065] text-[5rem] text-center text-[#9dcf88] sticky  top-72",
   },
 ];
 
-const spanClass = `${play.className} xl:text-center text-xl lg:text-3xl`;
+export const words = [
+  {
+    name: "Exhale spa",
+    body: "General Manager",
+    image: Exhale,
+    class: "bg-[#9e9882] text-[5rem] text-center text-[#c4c5b0] sticky top-32",
+  },
+  {
+    name: "Freelance Creator",
+    body: "Digital Marketing",
+    image: Freelance,
+    class: "bg-[#6b9065] text-[5rem] text-center text-[#9dcf88] sticky top-56",
+  },
+  {
+    name: "canyon ranch",
+    body: "Guest Experience Manager",
+    image: CanyonRanch,
+    class: "bg-[#622d21] text-[5rem] text-center text-[#a45543] sticky  top-72",
+  },
+];
+
+const spanClass = `${play.className} xl:text-center text-3xl lg:text-5xl`;
 
 const Works = () => {
   const ref = useRef(null);
@@ -71,17 +93,19 @@ const Works = () => {
               <motion.div
                 ref={container}
                 key={index}
-                className={`${word.class} h-[100vh] w-[90vw] rounded-lg z-40 p-8 shadow-lg overflow-hidden`}
+                className={`${word.class}  lg:h-[100vh] w-[90vw] rounded-lg z-40 p-8 shadow-lg overflow-hidden`}
                 style={{
                   scale,
                   y,
                 }}
               >
                 <li>
-                  <h1 className="font-bold md:text-[5rem] lg:text-[8rem] -mt-10 -mb-10">
+                  <h1 className="font-bold text-[3rem] md:text-[5rem] lg:text-[8rem] lg:-mt-10 lg:-mb-10">
                     {word.name}
                   </h1>
-                  {/* <p className="text-xl">{word.body}</p> */}
+                  <p className="text-2xl md:text-[1rem] lg:text-[2rem]">
+                    {word.body}
+                  </p>
                   <motion.div className="mx-auto mt-4 overflow-hidden">
                     <Image
                       src={word.image}
@@ -94,7 +118,7 @@ const Works = () => {
             );
           })}
 
-          <div className="bg-pink-400 mb-96 flex justify-center items-center flex-col p-4  z-50 rounded-[5rem] sticky top-0 py-56">
+          <div className="bg-pink-400 mb-96 flex justify-center items-center flex-col p-4  z-50 rounded-[5rem] sticky top-0 pt-32 pb-56">
             <h3 className={`${spanClass} text-end text-green-800 mb-24`}>
               More about me
             </h3>
