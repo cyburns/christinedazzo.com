@@ -4,6 +4,7 @@ import { experimental_useFormStatus as useFormStatus } from "react-dom";
 import { sendEmail } from "@/actions/sendEmail";
 import Image from "next/image";
 import ChirsSnow from "@/public/images/chris-snow.png";
+import toast from "react-hot-toast";
 
 const play = Playfair_Display({
   weight: ["400", "700"],
@@ -16,20 +17,27 @@ const Contact = () => {
   const { pending } = useFormStatus();
 
   return (
-    <div className=" mb-96 flex flex-col p-4 relative mt-24">
+    <div className="mb-32 flex flex-col mt-24 justify-center items-center w-full">
       <h1 className="text-[#bfea88] text-center text-[14vw] md:text-[16vw] !leading-[0.8]">
         LET'S COLLABORATE
       </h1>
 
       <div className="flex flex-col lg:flex-row justify-between">
         <form
-          className="mt-10 flex flex-col dark:text-black space-y-7 w-[50%] p-16 justify-center "
+          className="mt-10 flex flex-col dark:text-black space-y-7 w-full lg:w-[50%] p-5 sm:p-16 justify-center "
           action={async (formData) => {
             const { data, error } = await sendEmail(formData);
+
+            if (error) {
+              toast.error(error);
+              return;
+            }
+
+            toast.success("Email sent successfully!");
           }}
         >
           <div className="mb-7">
-            <h1 className="text-[#bfea88] text-center text-[3vw] !leading-[0.9]">
+            <h1 className="text-[#bfea88] text-center text-[6vw] sm:text-[3vw] !leading-[0.9]">
               What are you waiting for? <br /> Let's do this.
             </h1>
           </div>
@@ -60,7 +68,7 @@ const Contact = () => {
             )}
           </button>
         </form>
-        <div className="w-[50%] p-16">
+        <div className="lg:w-[50%] p-5 sm:p-16">
           <Image src={ChirsSnow} alt="Chris in snow" />
         </div>
       </div>
