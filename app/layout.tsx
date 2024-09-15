@@ -10,7 +10,7 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata = {
   title: "Christine | Portfolio",
-  description: "Director of Marketing.",
+  description: "Management & Marketing.",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className=" bg-green-800 example">
+    <html lang="en" className="bg-green-800 example">
       <Mouse />
       <body className={`${bebasNeue.className} `}>
         {children}

@@ -3,16 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const words = [
-  "Hello",
-  "Happy",
-  "Birthday",
-  "Christine",
-  "Dazzo",
-  "❤️",
-  "❤️",
-  "❤️",
-];
+const words = ["Ciao", "Bonjour", "Salut", "Hola", "Hallo", "Hej", "Hello"];
 
 export const opacity = {
   initial: {

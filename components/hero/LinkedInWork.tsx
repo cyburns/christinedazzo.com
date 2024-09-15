@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LinkedInWork = () => {
@@ -8,12 +9,14 @@ const LinkedInWork = () => {
           LINKEDIN
         </a>
       </h2>
-      <h1
-        className="capitalize text-[6rem] sm:text-[9rem] font-semibold navigation-text -mt-10 sm:-mt-16 text-switch z-10 !leading-[0.9]"
-        data-replace="WORK"
-      >
-        <span>WORK</span>
-      </h1>
+      <Link href="/works">
+        <h1
+          className="capitalize text-[6rem] sm:text-[9rem] font-semibold navigation-text -mt-10 sm:-mt-16 text-switch z-10 !leading-[0.9]"
+          data-replace="WORK"
+        >
+          <span>WORK</span>
+        </h1>
+      </Link>
     </div>
   );
 };

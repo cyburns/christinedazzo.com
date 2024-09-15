@@ -10,7 +10,7 @@ import SplashScreen from "@/components/SplashScreen";
 import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
@@ -31,7 +31,7 @@ export default function Home() {
       </AnimatePresence>
       <Hero />
       <About />
-      <Works />
+      <Works isSinglePage />
       <Info />
       <Contact />
     </main>

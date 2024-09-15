@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const InstagramInfo = () => {
@@ -6,12 +7,14 @@ const InstagramInfo = () => {
       <h2 className="capitalize text-[2rem] sm:text-[3.5rem] font-extraligh mb-[3.1rem]  hover:underline z-50">
         <a href="https://www.instagram.com/christinedazzo/">INSTAGRAM</a>
       </h2>
-      <h1
-        className="capitalize text-[6rem] sm:text-[9rem] font-semibold navigation-text -mt-10 sm:-mt-16 text-switch z-10 !leading-[0.9]"
-        data-replace="INFO"
-      >
-        <span>INFO</span>
-      </h1>
+      <Link href="/info">
+        <h1
+          className="capitalize text-[6rem] sm:text-[9rem] font-semibold navigation-text -mt-10 sm:-mt-16 text-switch z-10 !leading-[0.9]"
+          data-replace="INFO"
+        >
+          <span>INFO</span>
+        </h1>
+      </Link>
     </div>
   );
 };

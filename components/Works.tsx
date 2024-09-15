@@ -58,7 +58,11 @@ export const words = [
 
 const spanClass = `${play.className} xl:text-center text-3xl lg:text-5xl`;
 
-const Works = () => {
+interface WorksProps {
+  isSinglePage: boolean;
+}
+
+const Works = ({ isSinglePage }: WorksProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -67,8 +71,10 @@ const Works = () => {
 
   const progress = scrollYProgress;
 
+  const noTopMargin = !isSinglePage && "-mt-32";
+
   return (
-    <div className="relative mb-10">
+    <div className={`mb-10 ${noTopMargin}`}>
       <div className="sticky top-[-14rem] justify-center items-center">
         <h1 className="text-pink-400 text-center text-[40vw] underline">
           WORK

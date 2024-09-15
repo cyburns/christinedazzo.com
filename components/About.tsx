@@ -81,7 +81,7 @@ const About = () => {
   };
 
   return (
-    <div className="items-center justify-center bg-green-800 !leading-[0.5] md:!leading-[0.7] pt-10 overflow-hidden">
+    <div className="items-center justify-center bg-green-800 !leading-[0.5] md:!leading-[0.7] pt-24 overflow-hidden">
       <div>
         <h1 className="text-center p-4 text-pink-400 text-[19.67vw] md:text-[20.78vw]">
           Boston-BASED
