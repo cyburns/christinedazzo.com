@@ -31,7 +31,7 @@ export default function Home() {
       </AnimatePresence>
       <Hero />
       <About />
-      <Works />
+      <Works isSinglePage />
       <Info />
       <Contact />
     </main>

@@ -23,7 +23,7 @@ const Barcode = () => {
             marketing and social
           </p>
           <p className="border border-pink-400 p-1 col-span-1 text-center">
-            24
+            2024
           </p>
           <p className="border border-pink-400 p-1 col-span-1">USA</p>
           <p className="border border-pink-400 p-1 col-span-4 text-right">

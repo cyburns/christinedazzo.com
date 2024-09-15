@@ -81,10 +81,10 @@ const About = () => {
   };
 
   return (
-    <div className="items-center justify-center bg-green-800 !leading-[0.5] md:!leading-[0.7] pt-10 overflow-hidden">
+    <div className="items-center justify-center bg-green-800 !leading-[0.5] md:!leading-[0.7] pt-24 overflow-hidden">
       <div>
-        <h1 className="text-center p-4 text-pink-400 text-[17vw] md:text-[18vw]">
-          New York-BASED
+        <h1 className="text-center p-4 text-pink-400 text-[19.67vw] md:text-[20.78vw]">
+          Boston-BASED
         </h1>
         <h1 className="text-center p-4 text-pink-400 text-[14.2vw] md:text-[15vw]">
           DIRECTOR • Marking
@@ -153,13 +153,11 @@ const About = () => {
           />
         </div>
         <h3 className="text-center max-w-3xl mx-auto !leading-7 text-3xl text-pink-400 p-4">
-          I'M CHRISTINE, A FREELANCE ART DIRECTOR, VISUAL DESIGNER, CREATIVE
-          DEVELOPER AND HOUSEPLANT ENTHUSIAST BASED IN NYC. I WORK WITH BRANDS
-          OF ALL SIZES, ACROSS ALL INDUSTRIES, IN EVERY CORNER OF THE WORLD.,
-          CREATING MEMORABLE BRANDS AND DIGITAL PRODUCTS THAT RESONATE WITH
-          THEIR AUDIENCE. I BELIEVE THAT STORIES TOLD AUTHENTICALLY & VISUALLY
-          ARE MORE EFFECTIVE AT CAPTIVATING AUDIENCES, EVOKING EMOTION AND
-          IMPROVING CONVERSION.
+          Hi, my name is Christine! I am a marketing professional with expertise
+          in brand management, digital strategy, and content creation. With
+          experience in the wellness and hospitality industries, I have
+          successfully led campaigns that drive customer engagement and brand
+          visibility.
         </h3>
       </motion.div>
     </div>
